@@ -1,12 +1,14 @@
 {
   "name": "scrapix-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript-based CLI Application for scraping Google images",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --pretty src/index.ts",
-    "build": "tsc && npm link",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
+    "test": "ts-node-dev --respawn --transpile-only --pretty src/utils/scraper.ts",
+    "release": "standard-version"
   },
   "bin": {
     "scrapix": "./dist/index.js"
@@ -33,12 +35,15 @@
     "commander": "^8.1.0",
     "figlet": "^1.5.0",
     "images-scraper": "^6.3.0",
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "@types/clear": "^0.1.2",
     "@types/figlet": "^1.5.4",
     "@types/inquirer": "^7.3.3",
+    "@types/request": "^2.48.7",
+    "standard-version": "^9.3.1",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
   }
