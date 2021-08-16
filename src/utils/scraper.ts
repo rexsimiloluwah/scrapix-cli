@@ -62,14 +62,14 @@ export async function saveFileFromURL(url: string, destination: string): Promise
 }
 
 export async function saveScrapedImages(image: ScrapedImage, name: string): Promise<void> {
-    if (!fs.existsSync(path.join('.','images'))){ fs.mkdirSync(path.join('.', 'images')) };
-    if (!fs.existsSync(path.join('.',`images/${name}`))) {
-        fs.mkdir(path.join('.', `images/${name}`), { recursive: true }, (err) => {
+    if (!fs.existsSync(path.join('.','scraped-images'))){ fs.mkdirSync(path.join('.', 'scraped-images')) };
+    if (!fs.existsSync(path.join('.',`scraped-images/${name}`))) {
+        fs.mkdir(path.join('.', `scraped-images/${name}`), { recursive: true }, (err) => {
             console.log(err)
         })
     }
     //console.log(`Directory ${name} created successfully !`)
-    saveFileFromURL(image.url, path.join('.', `images/${name}/${image.id}.jpg`))
+    saveFileFromURL(image.url, path.join('.', `scraped-images/${name}/${image.id}.jpg`))
         .then(()=>{
             console.log('Successfully downloaded file.');
         }).catch(error=>{

@@ -91,17 +91,17 @@ exports.saveFileFromURL = saveFileFromURL;
 function saveScrapedImages(image, name) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
-            if (!fs_1.default.existsSync(path_1.default.join('.', 'images'))) {
-                fs_1.default.mkdirSync(path_1.default.join('.', 'images'));
+            if (!fs_1.default.existsSync(path_1.default.join('.', 'scraped-images'))) {
+                fs_1.default.mkdirSync(path_1.default.join('.', 'scraped-images'));
             }
             ;
-            if (!fs_1.default.existsSync(path_1.default.join('.', "images/" + name))) {
-                fs_1.default.mkdir(path_1.default.join('.', "images/" + name), { recursive: true }, function (err) {
+            if (!fs_1.default.existsSync(path_1.default.join('.', "scraped-images/" + name))) {
+                fs_1.default.mkdir(path_1.default.join('.', "scraped-images/" + name), { recursive: true }, function (err) {
                     console.log(err);
                 });
             }
             //console.log(`Directory ${name} created successfully !`)
-            saveFileFromURL(image.url, path_1.default.join('.', "images/" + name + "/" + image.id + ".jpg"))
+            saveFileFromURL(image.url, path_1.default.join('.', "scraped-images/" + name + "/" + image.id + ".jpg"))
                 .then(function () {
                 console.log('Successfully downloaded file.');
             }).catch(function (error) {
