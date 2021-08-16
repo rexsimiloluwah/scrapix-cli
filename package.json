@@ -2,7 +2,10 @@
   "name": "scrapix-cli",
   "version": "1.0.1",
   "description": "A TypeScript-based CLI Application for scraping Google images",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --pretty src/index.ts",
     "clean": "rm -rf ./dist",
