@@ -13,7 +13,7 @@
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 ### Description
-`Scrapix` is an interactive CLI for scraping and downloading Google images easily. The core of this CLI is the [images-scraper](https://www.npmjs.com/package/images-scraper) package, which uses a puppeteer-based headless browser to automatically search and return the URLs of the images. This `scrapix` CLI basically primarily developers and non-developers to build image datasets for computer vision tasks majorly i.e. image classification, object detection, face recognition. 
+`Scrapix` is an interactive CLI for scraping and downloading Google images easily. The core of this CLI is the [images-scraper](https://www.npmjs.com/package/images-scraper) package, which uses a puppeteer-based headless browser to automatically search and return the URLs of the images. This `scrapix` CLI primarily helps developers and non-developers to build image datasets for computer vision tasks i.e. image classification, object detection, face recognition. 
 
 ### Installation
 ```bash
