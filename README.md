@@ -17,12 +17,12 @@
 
 ### Installation
 ```bash
-$ npm install scrapix
+$ npm install -g scrapix-cli
 ```
 
 ### To resolve `puppeteer` installation issues on Linux based OS: -
 ```bash
-$ sudo npm install scrapix-cli --unsafe-perm=true
+$ sudo npm install -g scrapix-cli --unsafe-perm=true
 ```
 
 ### Usage 
