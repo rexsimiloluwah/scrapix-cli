@@ -55,6 +55,6 @@ Required parameters: -
 }
 ```
 
-![View Video Demonstration](https://www.youtube.com/watch?v=3mRXiu-i4TY)
+[View Video Demonstration](https://www.youtube.com/watch?v=3mRXiu-i4TY)
 
 ### Contributing Guide
